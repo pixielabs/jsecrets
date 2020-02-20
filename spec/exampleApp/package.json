@@ -8,8 +8,8 @@
     "start": "node app",
     "test": "npx cypress run"
   },
-  "author": "Jonathan Andrews",
-  "license": "ISC",
+  "author": "Pixie Labs",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
   },

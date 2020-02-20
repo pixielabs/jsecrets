@@ -1,4 +1,23 @@
 {
+  "name": "jsecrets",
+  "description": "jsecrets is a wrapper around AWS Secrets Manager for your JavaScript projects.",
+  "version": "1.0.0",
+  "main": "jsecrets.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixielabs/jsecrets.git"
+  },
+  "keywords": [
+    "aws secrets manager",
+    "express"
+  ],
+  "author": "Pixie Labs",
+  "license": "MIT",
+  "files": ["jsecrets.js"],
+  "bugs": {
+    "url": "https://github.com/pixielabs/jsecrets/issues"
+  },
+  "homepage": "https://github.com/pixielabs/jsecrets#readme",
   "scripts": {
     "test": "jest",
     "exampleAppStart": "pushd ./spec/exampleApp; npm run start;",
