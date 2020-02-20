@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "test": "jest",
+    "exampleAppStart": "pushd ./spec/exampleApp; npm run start;",
+    "exampleAppTest": "pushd ./spec/exampleApp; npm run test;"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html"
+    ],
+    "testPathIgnorePatterns": [
+      "/cypress/"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.541.0"
+  }
+}

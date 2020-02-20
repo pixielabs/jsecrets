@@ -1,0 +1,47 @@
+name: Unit and Feature tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Get yarn cache
+      id: yarn-cache
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ${{ steps.yarn-cache.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}-${{ hashFiles('spec/**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    - name: Install the dependencies
+      run: |
+        # install the dependencies
+        yarn install
+        # cd into the exampleApp 
+        pushd ./spec/exampleApp
+        # install the dependencies
+        yarn install
+
+    - name: Unit tests (Jest)
+      run: |
+        # run the Unit tests
+        yarn test
+
+    - name: Feature Tests (Cypress)
+      run: |
+        # cd into the exampleApp 
+        pushd ./spec/exampleApp
+        # run the Cypress end-to-end tests
+        yarn ciTest

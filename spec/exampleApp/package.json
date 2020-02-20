@@ -1,0 +1,19 @@
+{
+  "name": "example-app",
+  "version": "1.0.0",
+  "description": "A example application for testing jsecrets",
+  "main": "app.js",
+  "scripts": {
+    "ciTest": "node app & npx cypress run",
+    "start": "node app",
+    "test": "npx cypress run"
+  },
+  "author": "Jonathan Andrews",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "cypress": "^3.8.3"
+  }
+}
