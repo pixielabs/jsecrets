@@ -4,7 +4,8 @@
 
 jsecrets lets you fetch and use secrets from
 [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) in your
-JavaScript projects.
+JavaScript projects. jsecrets is built and maintained by 
+[Pixie Labs](https://pixielabs.io).
 
 You may want to use this if you use AWS Secrets Manager to store encrypted
 credentials, e.g. for your database, or for accessing an API with a token,
