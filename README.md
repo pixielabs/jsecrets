@@ -1,4 +1,5 @@
 [![Actions Status](https://github.com/pixielabs/jsecrets/workflows/Unit%20and%20Feature%20tests/badge.svg)](https://github.com/pixielabs/jsecrets/actions)
+[![npm version](https://badge.fury.io/js/jsecrets.svg)](https://badge.fury.io/js/jsecrets)
 
 # jsecrets
 
